@@ -1,4 +1,4 @@
-baseURL = 'joshibrom.dev/'
+baseURL = 'https://joshibrom.dev/'
 locale = 'en-us'
 title = 'Joshua Ibrom | Systems-Focused Web Engineer'
 
