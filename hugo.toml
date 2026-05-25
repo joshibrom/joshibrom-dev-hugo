@@ -9,7 +9,7 @@ bio = '''
 I build minimalist web infrastructure and systems-level tooling,
 currently focused on performance work with Zig and Rust.
 '''
-pseudoname = 'JOSH IBROM'
+pseudoname = 'Joshua Ibrom'
 
 [menus]
 
