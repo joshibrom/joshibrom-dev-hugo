@@ -13,6 +13,9 @@
 
   --font-mono: 'IBM Plex Mono', 'Courier New', Courier, monospace;
   --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+
+  --max-w-page: 1000px;
+  --max-w-prose: var(--max-w-page);
 }
 
 // ─── Reset & base ─────────────────────────────────────────────────────────────
@@ -51,7 +54,7 @@ a {
 // ─── Layout shell ─────────────────────────────────────────────────────────────
 
 body {
-  max-width: 720px;
+  max-width: var(--max-w-page);
   min-height: 100vh;
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -176,7 +179,7 @@ body>footer {
     font-size: 13px;
     color: var(--text-muted);
     line-height: 1.8;
-    max-width: 480px;
+    max-width: 60%;
     margin-bottom: 0;
   }
 
@@ -358,7 +361,7 @@ body>footer {
 // ─── Project single page ──────────────────────────────────────────────────────
 
 .project-single {
-  max-width: 640px;
+  max-width: var(--max-w-prose);
 }
 
 .project-single-header {
