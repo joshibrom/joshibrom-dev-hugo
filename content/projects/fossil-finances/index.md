@@ -2,7 +2,7 @@
 title = "Fossil Finances"
 date = 2024-02-25T06:11:21-05:00
 lastmod = 2024-02-25T06:11:21-05:00
-draft = true
+draft = false
 description = "Winner of the 2024 RowdyHacks SWIVEL challenge, Fossil Finances is a web app boasting accessible and senior-friendly financial tools."
 slug = "fossil-finances"
 weight = 0              # Controls sort order on the projects list page

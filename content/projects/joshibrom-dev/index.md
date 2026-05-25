@@ -2,7 +2,7 @@
 title = "This Site"
 date = 2026-05-25T07:12:21-05:00
 lastmod = 2026-05-25T07:12:21-05:00
-draft = true
+draft = false
 description = "A minimalist developer portfolio and blog, built with Hugo. Focused on performance, semantic markup, and long-term maintainability."
 slug = "joshibrom-dev"
 weight = 100              # Controls sort order on the projects list page
