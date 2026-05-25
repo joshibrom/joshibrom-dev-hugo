@@ -1,0 +1,76 @@
+{{ define "main" }}
+<article class="project-single">
+
+  <header class="project-single-header">
+    <div class="project-single-title-row">
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.status }}
+      <span class="status-badge status-{{ . }}">{{ . }}</span>
+      {{ end }}
+    </div>
+    {{ with .Params.role }}
+    <p class="project-role">{{ . }}</p>
+    {{ end }}
+    {{ with .Description }}
+    <p class="project-single-desc">{{ . }}</p>
+    {{ end }}
+  </header>
+
+  <div class="project-meta">
+    {{ with .Params.stack }}
+    <div class="meta-row">
+      <span class="meta-label">Stack</span>
+      <ul class="stack">
+        {{ range . }}<li>{{ . }}</li>{{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    {{ if or .Params.repo_urls .Params.live_urls .Params.case_study_url }}
+    <div class="meta-row">
+      <span class="meta-label">Links</span>
+      <div class="project-links">
+        {{ range .Params.repo_urls }}
+        <a href="{{ .href }}" class="project-link" target="_blank" rel="noopener noreferrer">{{ .title }}</a>
+        {{ end }}
+        {{ range .Params.live_urls }}
+        <a href="{{ .href }}" class="project-link project-link--live" target="_blank" rel="noopener noreferrer">{{ .title }}</a>
+        {{ end }}
+        {{ with .Params.case_study_url }}
+        <a href="{{ . }}" class="project-link project-link--case-study">Case study →</a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+    <div class="meta-row">
+      <span class="meta-label">Date</span>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2006" }}</time>
+    </div>
+
+    {{ with .Params.lastmod }}
+    <div class="meta-row">
+      <span class="meta-label">Updated</span>
+      <time datetime="{{ . }}">{{ dateFormat "January 2006" . }}</time>
+    </div>
+    {{ end }}
+  </div>
+
+  {{ with .Resources.Get .Params.cover_image }}
+  <div class="project-cover">
+    <img src="{{ .RelPermalink }}" alt="{{ $.Title }} cover image" loading="lazy" />
+  </div>
+  {{ end }}
+
+  {{ with .Content }}
+  <div class="project-content prose">
+    {{ . }}
+  </div>
+  {{ end }}
+
+  <footer class="project-single-footer">
+    <a href="/projects/" class="back-link">← All projects</a>
+  </footer>
+
+</article>
+{{ end }}

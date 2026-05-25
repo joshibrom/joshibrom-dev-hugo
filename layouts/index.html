@@ -15,7 +15,10 @@
 </section>
 
 <section class="projects-preview">
-  <h2>Selected work</h2>
+  <header>
+    <h2>Selected work</h2>
+    <a href="/projects/" class="forward-link">All projects →</a>
+  </header>
   {{ range first 3 (where .Site.RegularPages "Section" "projects") }}
   <article>
     <a href="{{ .Permalink }}">{{ .Title }}</a>
@@ -30,7 +33,10 @@
 </section>
 
 <section class="posts-preview">
-  <h2>Recent writing</h2>
+  <header>
+    <h2>Recent writing</h2>
+    <a href="/posts/" class="forward-link">All posts →</a>
+  </header>
   {{ range first 3 (where .Site.RegularPages "Section" "posts") }}
   <article>
     <a href="{{ .Permalink }}">{{ .Title }}</a>
