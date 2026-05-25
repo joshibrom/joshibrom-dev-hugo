@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="page-header">
+  <h1>Projects</h1>
+  <p>{{ .Site.Params.projects_bio | default "A selection of things I've built." }}</p>
+</section>
+
+<div class="project-list">
+  {{ range sort .Pages "Weight" }}
+  {{ if not .Params.noindex }}
+    {{ partial "project-card.html" . }}
+  {{ end }}
+  {{ end }}
+</div>
+{{ end }}
