@@ -4,7 +4,7 @@ title = 'Joshua Ibrom | Systems-Focused Web Engineer'
 
 [params]
 hero_title = 'Building software'
-hero_title_accent = 'closer to the metal'
+hero_title_accent = 'closer to the metal.'
 bio = '''
 I build minimalist web infrastructure and systems-level tooling,
 currently focused on performance work with Zig and Rust.

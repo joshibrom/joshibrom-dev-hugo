@@ -10,6 +10,9 @@
   --text-dim: #7a7a72;
   --accent: #d4a84b;
   --accent-hi: #e8c06a;
+
+  --font-mono: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
 }
 
 // ─── Reset & base ─────────────────────────────────────────────────────────────
@@ -25,7 +28,7 @@
 html {
   background-color: var(--bg);
   color: var(--text-mid);
-  font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+  font-family: var(--font-mono);
   font-size: 14px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -487,10 +490,14 @@ body>footer {
 // ─── Prose ───────────────────────────────────────────────────────────────────
 
 .prose {
-  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-family: var(--font-sans);
   font-size: 15px;
   line-height: 1.85;
   color: var(--text-mid);
+
+  &.mono {
+    font-family: var(--font-mono);
+  }
 
   h1,
   h2,
@@ -498,7 +505,7 @@ body>footer {
   h4,
   h5,
   h6 {
-    font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+    font-family: var(--font-mono);
     font-weight: 400;
     color: var(--text);
     margin: 2rem 0 0.75rem;
@@ -582,7 +589,7 @@ body>footer {
   }
 
   code {
-    font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+    font-family: var(--font-mono);
     font-size: 13px;
     background: var(--bg-subtle);
     padding: 1px 6px;
@@ -632,10 +639,41 @@ body>footer {
     }
 
     th {
-      font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+      font-family: var(--font-mono);
       font-weight: 500;
       color: var(--text);
       background: var(--bg-subtle);
     }
+  }
+}
+
+.simple-tables {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-bottom: 1.25rem;
+    font-family: var(--font-mono);
+
+    th,
+    td {
+      padding: 0.5rem 0.75rem;
+      border: none;
+      text-align: left;
+    }
+
+    th {
+      font-weight: 500;
+      color: var(--accent);
+      background: var(--bg);
+      border-bottom: 1px solid var(--bg-border);
+    }
+  }
+}
+
+.larger-headings {
+  &.prose h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
   }
 }
