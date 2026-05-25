@@ -1,0 +1,10 @@
+<header>
+  <nav id="main-nav">
+    <a href="/" class="site-title">{{ .Site.Params.Pseudoname }}</a>
+    <ul>
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL }}"{{ if eq $.RelPermalink .URL }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>

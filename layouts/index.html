@@ -1,0 +1,34 @@
+{{ define "main" }}
+<section class="hero">
+  <h1>
+    {{ .Site.Params.Hero_title }}
+    <em>{{ .Site.Params.Hero_title_accent }}</em>
+  </h1>
+  <p>{{ .Site.Params.bio }}</p>
+</section>
+
+<section class="projects-preview">
+  <h2>Selected work</h2>
+  {{ range first 3 (where .Site.RegularPages "Section" "projects") }}
+  <article>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <p>{{ .Description }}</p>
+    {{ with .Params.stack }}
+    <ul class="stack">
+      {{ range . }}<li>{{ . }}</li>{{ end }}
+    </ul>
+    {{ end }}
+  </article>
+  {{ end }}
+</section>
+
+<section class="posts-preview">
+  <h2>Recent writing</h2>
+  {{ range first 3 (where .Site.RegularPages "Section" "posts") }}
+  <article>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+  </article>
+  {{ end }}
+</section>
+{{ end }}

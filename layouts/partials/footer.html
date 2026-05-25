@@ -1,0 +1,8 @@
+<footer>
+  <span>&copy; {{ now.Year }} Joshua Ibrom</span>
+    <ul>
+      {{ range .Site.Menus.footer }}
+      <li><a href="{{ .URL }}"{{ if eq $.RelPermalink .URL }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+</footer>

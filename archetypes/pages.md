@@ -5,4 +5,5 @@ lastmod = {{ .Date }}
 draft = true
 description = ""
 slug = "{{ .File.ContentBaseName }}"
+noindex = false
 +++

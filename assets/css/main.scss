@@ -1,0 +1,86 @@
+:root {
+  --bg: #0e0e0c;
+  --bg-subtle: #1e1e1a;
+  --bg-border: #2a2a26;
+  --text: #e8e4d6;
+  --text-mid: #c9c7bc;
+  --text-muted: #908e85;
+  --text-dim: #7a7a72;
+  --accent: #d4a84b;
+  --accent-hi: #e8c06a;
+}
+
+html {
+  background-color: var(--bg);
+  color: var(--text-mid);
+  font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+}
+
+body {
+  max-width: 720px;
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+body>header {
+  padding-block: 16px;
+  border-bottom: 1px solid var(--bg-border);
+}
+
+nav#main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  li {
+    display: block;
+  }
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-dim);
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  li,
+  li a {
+    display: block;
+    color: var(--text-muted);
+  }
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+
+  transition: color 250ms ease-in-out;
+}
+
+a:hover {
+  color: var(--accent-hi);
+}
+
+h1>em {
+  color: var(--accent);
+  font-style: normal;
+}

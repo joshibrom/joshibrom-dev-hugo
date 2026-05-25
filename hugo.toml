@@ -1,3 +1,22 @@
 baseURL = 'https://example.org/'
 locale = 'en-us'
-title = 'My New Hugo Project'
+title = 'Joshua Ibrom | Systems-Focused Web Engineer'
+
+[params]
+hero_title = 'Building software'
+hero_title_accent = 'closer to the metal'
+bio = '''
+I build minimalist web infrastructure and systems-level tooling,
+currently focused on performance work with Zig and Rust.
+'''
+pseudoname = 'JOSH IBROM'
+
+[menus]
+
+[[menus.footer]]
+name = 'GitHub'
+url = 'https://github.com/joshibrom'
+
+[[menus.footer]]
+name = 'LinkedIn'
+url = 'https://linkedin.com/in/Joshua-Ibrom'
