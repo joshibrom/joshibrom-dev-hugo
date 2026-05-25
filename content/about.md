@@ -2,7 +2,7 @@
 title = "About"
 date = 2026-05-25T08:05:56-05:00
 lastmod = 2026-05-25T08:05:56-05:00
-draft = true
+draft = false
 description = "About me: biographical and employment history information"
 font = "mono"
 slug = "about"
