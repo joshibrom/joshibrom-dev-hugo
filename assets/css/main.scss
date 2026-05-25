@@ -2,6 +2,7 @@
 
 :root {
   --bg: #0e0e0c;
+  --bg-darker: #0a0a0a;
   --bg-subtle: #1e1e1a;
   --bg-border: #2a2a26;
   --text: #e8e4d6;
@@ -119,7 +120,7 @@ body>footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--text-dim);
+  color: var(--text-muted);
   font-size: 12px;
   letter-spacing: 0.04em;
 
@@ -188,7 +189,7 @@ body>footer {
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
-    color: var(--text-dim);
+    color: var(--text-muted);
 
     ul {
       display: flex;
@@ -223,6 +224,7 @@ body>footer {
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--text-dim);
+      background-color: var(--bg-darker);
     }
   }
 }
@@ -239,6 +241,7 @@ body>footer {
     padding: 2px 8px;
     border: 0.5px solid var(--bg-border);
     color: var(--text-dim);
+    background-color: var(--bg-darker);
     border-radius: 2px;
     letter-spacing: 0.04em;
   }
@@ -252,6 +255,7 @@ body>footer {
   text-transform: uppercase;
   border: 0.5px solid var(--bg-border);
   color: var(--text-dim);
+  background-color: var(--bg-darker);
 
   &.status-active {
     color: var(--accent);
@@ -265,6 +269,7 @@ body>footer {
 
   &.status-archived {
     color: var(--text-dim);
+    background-color: var(--bg-darker);
   }
 }
 
@@ -413,7 +418,7 @@ body>footer {
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--text-muted);
   min-width: 60px;
   flex-shrink: 0;
 }
@@ -678,5 +683,197 @@ body>footer {
   &.prose h2 {
     font-size: 1.5rem;
     font-weight: bold;
+  }
+}
+
+// ─── Page header (shared between posts and projects list) ─────────────────────
+
+.page-header {
+  padding: 3rem 0 2.5rem;
+  border-bottom: 1px solid var(--bg-border);
+  margin-bottom: 0;
+
+  h1 {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+}
+
+// ─── Post tags (shared) ───────────────────────────────────────────────────────
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    font-size: 11px;
+    padding: 2px 8px;
+    border: 0.5px solid var(--bg-border);
+    color: var(--text-dim);
+    background-color: var(--bg-darker);
+    border-radius: 2px;
+    letter-spacing: 0.04em;
+
+    &:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+  }
+}
+
+.post-series {
+  font-size: 11px;
+  padding: 2px 8px;
+  border: 0.5px solid var(--bg-border);
+  color: var(--accent);
+  border-radius: 2px;
+  letter-spacing: 0.04em;
+}
+
+// ─── Posts list page ──────────────────────────────────────────────────────────
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1.75rem 0;
+  border-bottom: 0.5px solid var(--bg-border);
+
+  &:first-child {
+    border-top: 0.5px solid var(--bg-border);
+  }
+}
+
+.post-item-main {
+  flex: 1;
+  min-width: 0;
+
+  h2 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0.35rem;
+
+    a {
+      color: var(--text);
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+}
+
+.post-item-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 0.75rem;
+}
+
+.post-item-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.post-item-date {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+// ─── Post single page ─────────────────────────────────────────────────────────
+
+.post-single {
+  max-width: var(--max-w-prose);
+}
+
+.post-single-header {
+  padding: 3rem 0 1.75rem;
+  border-bottom: 0.5px solid var(--bg-border);
+
+  h1 {
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+  }
+}
+
+.post-single-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+}
+
+.post-single-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  time {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+  }
+}
+
+.post-updated {
+  font-size: 12px;
+  color: var(--text-muted);
+  background-color: var(--bg-darker);
+  letter-spacing: 0.04em;
+}
+
+.post-tags--top {
+  padding: 1.25rem 0;
+  border-bottom: 0.5px solid var(--bg-border);
+}
+
+.post-content {
+  padding-top: 2rem;
+}
+
+.post-single-footer {
+  padding: 2rem 0;
+  border-top: 0.5px solid var(--bg-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.post-canonical {
+  font-size: 12px;
+  color: var(--text-muted);
+
+  a {
+    color: var(--accent);
   }
 }

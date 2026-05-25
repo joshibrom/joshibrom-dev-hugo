@@ -1,0 +1,30 @@
+{{ define "main" }}
+<section class="page-header">
+  <h1>Writing</h1>
+  <p>{{ .Site.Params.posts_bio | default "Notes on software, systems, and the occasional rabbit hole." }}</p>
+</section>
+
+<div class="post-list">
+  {{ range .Pages }}
+  <article class="post-item">
+    <div class="post-item-main">
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      {{ with .Description }}
+      <p class="post-item-desc">{{ . }}</p>
+      {{ end }}
+      <div class="post-item-meta">
+        {{ with .Params.tags }}
+        <ul class="post-tags">
+          {{ range . }}<li><a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>{{ end }}
+        </ul>
+        {{ end }}
+        {{ with .Params.series }}
+        <span class="post-series">{{ . }}</span>
+        {{ end }}
+      </div>
+    </div>
+    <time class="post-item-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+  </article>
+  {{ end }}
+</div>
+{{ end }}

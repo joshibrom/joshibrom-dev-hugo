@@ -1,0 +1,40 @@
+{{ define "main" }}
+<article class="post-single">
+
+  <header class="post-single-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}
+    <p class="post-single-desc">{{ . }}</p>
+    {{ end }}
+    <div class="post-single-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      {{ with .Params.lastmod }}
+        {{ if ne . $.Date }}
+        <span class="post-updated">Updated <time datetime="{{ . }}">{{ dateFormat "January 2, 2006" . }}</time></span>
+        {{ end }}
+      {{ end }}
+      {{ with .Params.series }}
+      <span class="post-series">{{ . }}</span>
+      {{ end }}
+    </div>
+  </header>
+
+  {{ with .Params.tags }}
+  <ul class="post-tags post-tags--top">
+    {{ range . }}<li><a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>{{ end }}
+  </ul>
+  {{ end }}
+
+  <div class="post-content prose">
+    {{ .Content }}
+  </div>
+
+  <footer class="post-single-footer">
+    {{ with .Params.canonical }}
+    <p class="post-canonical">Originally published at <a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ . }}</a></p>
+    {{ end }}
+    <a href="/posts/" class="back-link">← All posts</a>
+  </footer>
+
+</article>
+{{ end }}
