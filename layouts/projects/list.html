@@ -5,7 +5,7 @@
 </section>
 
 <div class="project-list">
-  {{ range sort .Pages "Weight" }}
+  {{ range sort .Pages "Weight" "desc" }}
   {{ if not .Params.noindex }}
     {{ partial "project-card.html" . }}
   {{ end }}
