@@ -20,15 +20,7 @@
     <a href="/projects/" class="forward-link">All projects →</a>
   </header>
   {{ range first 3 (where .Site.RegularPages "Section" "projects") }}
-  <article>
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
-    <p>{{ .Description }}</p>
-    {{ with .Params.stack }}
-    <ul class="stack">
-      {{ range . }}<li>{{ . }}</li>{{ end }}
-    </ul>
-    {{ end }}
-  </article>
+    {{ partial "project-card.html" . }}
   {{ end }}
 </section>
 

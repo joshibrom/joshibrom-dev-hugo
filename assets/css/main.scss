@@ -307,6 +307,10 @@ body>footer {
   &:first-child {
     border-top: 0.5px solid var(--bg-border);
   }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
 }
 
 .project-item-header {

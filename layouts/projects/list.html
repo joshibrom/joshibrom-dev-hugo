@@ -7,40 +7,7 @@
 <div class="project-list">
   {{ range sort .Pages "Weight" }}
   {{ if not .Params.noindex }}
-  <article class="project-item">
-    <div class="project-item-header">
-      <div class="project-item-title-row">
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        {{ with .Params.status }}
-        <span class="status-badge status-{{ . }}">{{ . }}</span>
-        {{ end }}
-      </div>
-      {{ with .Params.role }}
-      <span class="project-role">{{ . }}</span>
-      {{ end }}
-    </div>
-    {{ with .Description }}
-    <p class="project-desc">{{ . }}</p>
-    {{ end }}
-    <div class="project-item-footer">
-      {{ with .Params.stack }}
-      <ul class="stack">
-        {{ range . }}<li>{{ . }}</li>{{ end }}
-      </ul>
-      {{ end }}
-      <div class="project-links">
-        {{ range .Params.repo_urls }}
-        <a href="{{ .href }}" class="project-link" target="_blank" rel="noopener noreferrer">{{ .title }}</a>
-        {{ end }}
-        {{ range .Params.live_urls }}
-        <a href="{{ .href }}" class="project-link project-link--live" target="_blank" rel="noopener noreferrer">{{ .title }}</a>
-        {{ end }}
-        {{ with .Params.case_study_url }}
-        <a href="{{ . }}" class="project-link project-link--case-study">Case study →</a>
-        {{ end }}
-      </div>
-    </div>
-  </article>
+    {{ partial "project-card.html" . }}
   {{ end }}
   {{ end }}
 </div>
