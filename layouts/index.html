@@ -1,10 +1,17 @@
 {{ define "main" }}
 <section class="hero">
   <h1>
-    {{ .Site.Params.Hero_title }}
+    {{ .Site.Params.Hero_title }}<br />
     <em>{{ .Site.Params.Hero_title_accent }}</em>
   </h1>
   <p>{{ .Site.Params.bio }}</p>
+  <div id="hero-links">
+    <ul>
+      {{ range .Site.Menus.hero }}
+        <li><a href="{{ .URL }}"{{ if eq $.RelPermalink .URL }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
 </section>
 
 <section class="projects-preview">

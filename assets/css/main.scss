@@ -25,7 +25,7 @@ body {
 }
 
 body>header {
-  padding-block: 16px;
+  padding-block: 1.25rem;
   border-bottom: 1px solid var(--bg-border);
 }
 
@@ -50,6 +50,12 @@ main {
 }
 
 footer {
+  padding-block: 1.25rem;
+  border-top: 1px solid var(--bg-border);
+}
+
+footer,
+#hero-links {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -57,15 +63,22 @@ footer {
   color: var(--text-dim);
 
   ul {
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: row;
-    gap: 12px;
+    gap: 1.25rem;
   }
 
   li,
   li a {
     display: block;
     color: var(--text-muted);
+  }
+
+  li>a:hover {
+    color: var(--accent-hi);
+    text-decoration: underline;
   }
 }
 
@@ -83,4 +96,17 @@ a:hover {
 h1>em {
   color: var(--accent);
   font-style: normal;
+}
+
+.hero {
+  padding-block: 2.75rem;
+  border-bottom: 1px solid var(--bg-border);
+
+  #hero-links {
+    margin-top: 2rem;
+  }
+}
+
+.hero * {
+  max-width: 80%;
 }
