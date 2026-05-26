@@ -93,7 +93,13 @@ body>header {
 
   ul {
     display: flex;
-    gap: 1.75rem;
+    gap: 1.25rem;
+  }
+
+  @media(min-width: 640px) {
+    ul {
+      gap: 1.75rem;
+    }
   }
 
   a:not(.site-title) {
@@ -180,8 +186,14 @@ body>footer {
     font-size: 13px;
     color: var(--text-muted);
     line-height: 1.8;
-    max-width: 60%;
+    max-width: 90%;
     margin-bottom: 0;
+  }
+
+  @media(min-width: 640px) {
+    p {
+      max-width: 60%;
+    }
   }
 
   #hero-links {
