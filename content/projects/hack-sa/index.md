@@ -5,7 +5,7 @@ lastmod = 2023-10-01T20:43:38-05:00
 draft = false
 description = "The website for HackSA, a hackathon hosted by the ACM chapter at Texas A&M University-San Antonio."
 slug = "hack-sa"
-weight = 0              # Controls sort order on the projects list page
+weight = 1              # Controls sort order on the projects list page
 
 # Project specifics
 stack = ["Next.js", "React", "Vercel", "Firebase"]              # e.g. ["Go", "PostgreSQL", "Docker"]
