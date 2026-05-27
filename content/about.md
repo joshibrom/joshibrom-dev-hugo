@@ -30,3 +30,5 @@ build systems, deployment workflows--and run my own self-hosted infrastructure.
 | TAMU-SA Dept. of CEMS | Graduate Research Assistant | 2024 |
 | TAMU-SA ITS Web Services | Web Development Intern | 2024 |
 | TAMU-SA ITS Web Services | Student Worker | 2023-2024 |
+
+Full details are on [my resume](/joshua-ibrom-resume.pdf).
