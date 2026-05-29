@@ -1,7 +1,7 @@
 +++
 title = "This Site"
 date = 2026-05-25T07:12:21-05:00
-lastmod = 2026-05-25T07:12:21-05:00
+lastmod = 2026-05-29T16:34:21-05:00
 draft = false
 description = "A minimalist developer portfolio and blog, built with Hugo. Focused on performance, semantic markup, and long-term maintainability."
 slug = "joshibrom-dev"
@@ -52,11 +52,11 @@ auditing. I want to be upfront about that rather than obscure it.
 I'm also treating this as an opportunity to think carefully about what
 AI-assisted development actually looks like in practice--where it helps,
 where it falls short, and what it means for ownership of the work. I'll be
-writing more about this [in a forthcoming post](#).
+writing more about this [in a forthcoming post](/posts/building-with-hugo/).
 
 ## Design decisions
 
-- Monospace type sitewide (IBM Plex Mono) as a deliberate craft signal
+- Monospace type where allowable (IBM Plex Mono) as a deliberate craft signal
 - Dark background with a gold accent, tuned to meet WCAG 2.0 AA contrast
-- No client-side JavaScript (everything is static HTML and CSS)
+- No client-side JavaScript (where possible) (prefer static HTML and CSS)
 - Page bundles for content to keep assets colocated with their source files
