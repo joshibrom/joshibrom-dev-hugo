@@ -42,8 +42,6 @@ various bugs and issues that arose during development, as well in aiding in maki
 [HackPortal](https://github.com/acmutd/hackportal). Additionally, I designed the FAQ section on the homepage, as well as a page
 in the admin dashboard for better-tracking a participant's scans of QR codes for each event.
 
-<br />
-
 There were numerous occassions for which the other members of the web team needed some issue resovled but were unsure of the files
 that needed to be modified. I was able to assist them in finding the files and making the necessary changes to resolve the issue.
 

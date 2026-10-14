@@ -25,6 +25,10 @@ url = '/posts'
 name = 'About'
 url = '/about'
 
+[[menus.main]]
+name = 'Resume'
+url = '/resume'
+
 [[menus.hero]]
 name = 'GitHub'
 url = 'https://github.com/joshibrom'
@@ -35,7 +39,7 @@ url = 'https://linkedin.com/in/Joshua-Ibrom'
 
 [[menus.hero]]
 name = 'Resume'
-url = '/joshua-ibrom-resume.pdf'
+url = '/resume'
 
 [[menus.footer]]
 name = 'GitHub'
@@ -47,5 +51,5 @@ url = 'https://linkedin.com/in/Joshua-Ibrom'
 
 [[menus.footer]]
 name = 'Resume'
-url = '/joshua-ibrom-resume.pdf'
+url = '/resume'
 weight = 1
