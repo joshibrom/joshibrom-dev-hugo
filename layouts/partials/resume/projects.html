@@ -1,0 +1,27 @@
+<h2>Selected Projects</h2>
+
+{{ range or .project .projects }}
+  {{ $id := .id | default (printf "project-%s" (.title | urlize)) }}
+  <div class="resume-entry resume-project" id="{{ $id }}">
+    <div class="resume-entry-header">
+      <div class="resume-entry-title-row">
+        <h3 class="resume-entry-title">
+          <a href="#{{ $id }}" class="anchor-link">{{ .title }}</a>
+        </h3>
+        {{ with .category }}
+        <span class="resume-category">{{ . }}</span>
+        {{ end }}
+      </div>
+      {{ with .stack }}
+      <ul class="stack">
+        {{ range . }}<li>{{ . }}</li>{{ end }}
+      </ul>
+      {{ end }}
+    </div>
+    <ul class="resume-bullets">
+      {{ range .bullets }}
+        <li>{{ . | markdownify }}</li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}

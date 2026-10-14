@@ -25,10 +25,10 @@ build systems, deployment workflows--and run my own self-hosted infrastructure.
 
 | Employer | Position | Dates |
 | :--------------- | :--------------- | :--------------- |
-| TAMU-SA ITS Web Services | Web Applications Developer | 2025-present |
-| TAMU-SA Dept. of Natural Sciences | Research Technician | 2024-2025 |
+| TAMU-SA ITS Web Services | [Web Applications Developer](/resume#web-applications-developer) | 2025-present |
+| TAMU-SA Dept. of Natural Sciences | [Research Technician](/resume#research-technician) | 2024-2025 |
 | TAMU-SA Dept. of CEMS | Graduate Research Assistant | 2024 |
-| TAMU-SA ITS Web Services | Web Development Intern | 2024 |
+| TAMU-SA ITS Web Services | [Web Development Intern](/resume#web-development-intern) | 2024 |
 | TAMU-SA ITS Web Services | Student Worker | 2023-2024 |
 
-Full details are on [my resume](/joshua-ibrom-resume.pdf).
+Full details are on [my resume](/resume) (or download the [PDF version](/joshua-ibrom-resume.pdf)).
