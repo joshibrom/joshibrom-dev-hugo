@@ -47,20 +47,28 @@ end_date = "05/2024"
 [[employment]]
 employer = "Texas A&M University-San Antonio"
 location = "San Antonio, TX"
+dates = "2023 — Present"
 roles = [
-  { id = "web-applications-developer", title = "Web Applications Developer", team = "ITS Web Team", start_date = "07/2025", bullets = [
+  { id = "web-applications-developer", title = "Web Applications Developer", team = "ITS Web Services", start_date = "07/2025", print = true, bullets = [
     "__Engineered a 23x performance gain__ (380s to 16s) by rewriting a legacy single-threaded data intake pipeline in Python, eliminating TLS handshake churn via __thread-level TCP connection pooling__ and __concurrent I/O__.",
     "__Architected a multithreaded extraction engine in Python__, achieving a __10x throughput increase__ using `ThreadPoolExecutor` and decorator-driven exponential backoff with retry handling to generate structured RAG datasets.",
     "__Spearheaded automated testing and CI/CD pipelines__, standardizing deployment workflows across the team and replacing manual release bottlenecks.",
     "__Mentored 4 student developers__ via structured code reviews and system architecture demos, overseeing critical intake refactors for high-reliability data processing.",
   ]},
-  { id = "research-technician", title = "Research Technician", team = "Office of Research", start_date = "12/2024", end_date = "07/2025", bullets = [
+  { id = "research-technician", title = "Research Technician", team = "Office of Research", start_date = "12/2024", end_date = "07/2025", print = true, bullets = [
     "__Engineered an automated data extraction pipeline__ scraping HB2504 public endpoints to harvest faculty records across __~650 CVs__, integrating an LLM parsing layer with __SQLite__ for transactional persistence.",
     "__Integrated academic publication tracking__ in collaboration with university stakeholders, automating schema updates to streamline institutional visibility of research outputs.",
   ]},
-  { id = "web-development-intern", title = "Web Development Intern", team = "ITS Web Team", start_date = "05/2024", end_date = "08/2024", bullets = [
+  { id = "graduate-research-assistant", title = "Graduate Research Assistant", team = "Dept. of CEMS", start_date = "09/2024", end_date = "12/2024", print = false, bullets = [
+    "Facilitated lab sessions and demonstrated cloud deployment workflows (GCP, AWS) for graduate coursework.",
+  ]},
+  { id = "web-development-intern", title = "Web Development Intern", team = "ITS Web Services", start_date = "05/2024", end_date = "08/2024", print = true, bullets = [
     "__Remediated critical Broken Access Control (BFLA/IDOR) vulnerabilities__ in a legacy LAMP application, preventing unauthorized CRUD execution on sensitive records for __8,000+ accounts__.",
     "__Engineered custom input validation and sanitization layers__ to enforce strict type constraints on untrusted request parameters, hardening legacy database queries against injection vectors.",
+  ]},
+  { id = "student-worker", title = "Student Worker", team = "ITS Web Services", start_date = "08/2023", end_date = "05/2024", print = false, bullets = [
+    "__Contributed maintenance and security patches to a production LAMP stack application__, replacing insecure URL parameters with server-side session state and hardening form input validation.",
+    "__Eliminated external CDN dependencies__ by vendoring library assets locally, hardening application isolation and resilience against third-party network failures.",
   ]},
 ]
 

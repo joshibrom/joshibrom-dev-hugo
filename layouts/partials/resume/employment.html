@@ -24,11 +24,13 @@
             {{ end }}
           </div>
         </div>
+        {{ with .bullets }}
         <ul class="resume-bullets">
-          {{ range .bullets }}
+          {{ range . }}
             <li>{{ . | markdownify }}</li>
           {{ end }}
         </ul>
+        {{ end }}
       </div>
     {{ end }}
   </div>
