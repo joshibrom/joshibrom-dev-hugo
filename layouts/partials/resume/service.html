@@ -1,0 +1,23 @@
+<h2>Professional Service &amp; Leadership</h2>
+
+{{ range or .professional_service .professional_services }}
+  {{ $id := .id | default (printf "service-%s" (.title | urlize)) }}
+  <div class="resume-entry resume-service" id="{{ $id }}">
+    <div class="resume-entry-header">
+      <div class="resume-entry-title-row">
+        <h3 class="resume-entry-title">
+          <a href="#{{ $id }}" class="anchor-link">{{ .title }}</a>
+        </h3>
+        <span class="resume-date">{{ .start_date }} &mdash; {{ with .end_date }}{{ . }}{{ else }}Present{{ end }}</span>
+      </div>
+      <div class="resume-entry-sub">
+        <span class="resume-organization">{{ .organization }}</span>
+      </div>
+    </div>
+    <ul class="resume-bullets">
+      {{ range .bullets }}
+        <li>{{ . | markdownify }}</li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}

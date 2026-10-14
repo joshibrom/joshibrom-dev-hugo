@@ -1,0 +1,10 @@
+<h2>Skills</h2>
+
+<div class="resume-skills-list">
+  {{ range .skills }}
+  <div class="resume-skill-group">
+    <h3>{{ .category }}</h3>
+    <p>{{ delimit .items ", " }}</p>
+  </div>
+  {{ end }}
+</div>

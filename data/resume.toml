@@ -1,0 +1,112 @@
+name = "Joshua Ibrom"
+email = "joshuaibrom@gmail.com"
+phone = "(830) 391-0781"
+location = "San Antonio, TX"
+
+[website]
+title = "joshibrom.dev"
+href = "https://joshibrom.dev"
+
+[github]
+title = "joshibrom"
+href = "https://github.com/joshibrom"
+
+[linkedin]
+title = "Joshua-Ibrom"
+href = "https://linkedin.com/in/joshua-ibrom"
+
+[[skills]]
+category = "Systems & Languages"
+items = ["Rust", "Python", "Go", "Zig", "C", "TypeScript", "PHP", "Bash"]
+
+[[skills]]
+category = "Infrastructure & Systems"
+items = ["Linux Systems & POSIX", "Multithreading & Concurrency", "TCP/IP & Sockets", "Docker & Compose", "CI/CD Pipelines", "Git"]
+
+[[skills]]
+category = "Databases & Storage"
+items = ["PostgreSQL", "MariaDB", "SQLite", "Vector Search / RAG", "Relational Modeling"]
+
+[[skills]]
+category = "Backend & Developer Tooling"
+items = ["REST APIs", "Laravel", "Flask", "CLI / TUI Development", "Automated Testing"]
+
+[[education]]
+degree = "MS Computer Science"
+school = "Texas A&M University-San Antonio"
+start_date = "08/2024"
+end_date = "05/2026"
+gpa = 3.9
+
+[[education]]
+degree = "BS Computer Science"
+school = "Texas A&M University-San Antonio"
+start_date = "08/2017"
+end_date = "05/2024"
+
+[[employment]]
+employer = "Texas A&M University-San Antonio"
+location = "San Antonio, TX"
+dates = "2023 — Present"
+roles = [
+  { id = "web-applications-developer", title = "Web Applications Developer", team = "ITS Web Services", start_date = "07/2025", print = true, bullets = [
+    "__Engineered a 23x performance gain__ (380s to 16s) by rewriting a legacy single-threaded data intake pipeline in Python, eliminating TLS handshake churn via __thread-level TCP connection pooling__ and __concurrent I/O__.",
+    "__Architected a multithreaded extraction engine in Python__, achieving a __10x throughput increase__ using `ThreadPoolExecutor` and decorator-driven exponential backoff with retry handling to generate structured RAG datasets.",
+    "__Spearheaded automated testing and CI/CD pipelines__, standardizing deployment workflows across the team and replacing manual release bottlenecks.",
+    "__Mentored 4 student developers__ via structured code reviews and system architecture demos, overseeing critical intake refactors for high-reliability data processing.",
+  ]},
+  { id = "research-technician", title = "Research Technician", team = "Office of Research", start_date = "12/2024", end_date = "07/2025", print = true, bullets = [
+    "__Engineered an automated data extraction pipeline__ scraping HB2504 public endpoints to harvest faculty records across __~650 CVs__, integrating an LLM parsing layer with __SQLite__ for transactional persistence.",
+    "__Integrated academic publication tracking__ in collaboration with university stakeholders, automating schema updates to streamline institutional visibility of research outputs.",
+  ]},
+  { id = "graduate-research-assistant", title = "Graduate Research Assistant", team = "Dept. of CEMS", start_date = "09/2024", end_date = "12/2024", print = false, bullets = [
+    "Facilitated lab sessions and demonstrated cloud deployment workflows (GCP, AWS) for graduate coursework.",
+  ]},
+  { id = "web-development-intern", title = "Web Development Intern", team = "ITS Web Services", start_date = "05/2024", end_date = "08/2024", print = true, bullets = [
+    "__Remediated critical Broken Access Control (BFLA/IDOR) vulnerabilities__ in a legacy LAMP application, preventing unauthorized CRUD execution on sensitive records for __8,000+ accounts__.",
+    "__Engineered custom input validation and sanitization layers__ to enforce strict type constraints on untrusted request parameters, hardening legacy database queries against injection vectors.",
+  ]},
+  { id = "student-worker", title = "Student Worker", team = "ITS Web Services", start_date = "08/2023", end_date = "05/2024", print = false, bullets = [
+    "__Contributed maintenance and security patches to a production LAMP stack application__, replacing insecure URL parameters with server-side session state and hardening form input validation.",
+    "__Eliminated external CDN dependencies__ by vendoring library assets locally, hardening application isolation and resilience against third-party network failures.",
+  ]},
+]
+
+[[project]]
+title = "struktur"
+category = "Developer Tooling & Systems"
+stack = ["Rust", "SQLite", "CLI", "Tera"]
+bullets = [
+  "Architected a local-first application tracking and document generation suite in __Rust__ using a __multi-crate Cargo workspace__ (`core`, `cli`, `tui`).",
+  "Engineered embedded persistence via __SQLite (rusqlite)__ featuring compile-time embedded migrations (`PRAGMA user_version`), atomic transactions, and cascading audit trails.",
+  "Designed domain schemas enforcing __referential integrity at load-time__ via Serde `TryFrom` validation pipelines, preventing invalid state representation in memory.",
+  "Integrated a dynamic templating engine (__Tera__) with context resolution, hook pre-rendering, and cross-platform output routing (stdout, disk, clipboard, WSL).",
+]
+
+[[project]]
+title = "Academic Knowledge Graph & Discovery Platform"
+category = "Backend & Search Infrastructure"
+stack = ["Laravel", "MariaDB", "Python"]
+bullets = [
+  "Consolidating thousands of disparate academic publication records, DOIs, and grants into a queryable relational schema linking faculty across institutional departments.",
+  "Engineered a taxonomy normalization pipeline mapping unconstrained LLM entity extractions to the __Digital Commons Disciplines Taxonomy (Tier 2)__, converting noisy text into structured research clusters.",
+  "Evaluated full-text search indexing strategies in __MariaDB__, balancing query latency against operational complexity to maintain a low-maintenance production footprint.",
+]
+
+[[project]]
+title = "Squelch"
+category = "Systems Programming"
+stack = ["Zig", "POSIX", "mmap"]
+bullets = [
+  "Architected an experimental static site generator in __Zig__ achieving absolute zero-allocation parsing by relying solely on pointer slices into __memory-mapped files (`std.posix.mmap`)__.",
+  "Investigated compile-time stream composition techniques to eliminate dynamic heap allocations and intermediate I/O buffers during document generation.",
+]
+
+[[professional_service]]
+title = "Staff Advisor"
+organization = "TAMU-SA ACM"
+start_date = "01/2026"
+bullets = [
+  "Developed and led an __Introduction to Rust__ workshop, instructing students on __memory safety, borrow checker semantics, and low-level systems concepts__.",
+  "Conducted a __Developer Workflows with Git__ session, training students on interactive rebasing, trunk-based branching strategies, and conflict resolution.",
+]

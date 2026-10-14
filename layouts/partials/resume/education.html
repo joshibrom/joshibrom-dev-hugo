@@ -1,0 +1,20 @@
+<h2>Education</h2>
+
+{{ range or .education .educations }}
+  {{ $id := .id | default (printf "education-%s" (.degree | urlize)) }}
+  <div class="resume-entry resume-education" id="{{ $id }}">
+    <div class="resume-entry-header">
+      <div class="resume-entry-title-row">
+        <h3 class="resume-entry-title">{{ .degree }}</h3>
+        <span class="resume-date">{{ .start_date }} &mdash; {{ .end_date }}</span>
+      </div>
+      <div class="resume-entry-sub">
+        <span class="resume-school">{{ .school }}</span>
+        {{ with .gpa }}
+        <span class="sep">&middot;</span>
+        <span class="resume-gpa">GPA: {{ . }}</span>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+{{ end }}

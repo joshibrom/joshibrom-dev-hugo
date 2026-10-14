@@ -1,0 +1,55 @@
+{{ $resume := or hugo.Data.resume .Site.Data.resume }}
+{{ range $resume.employment }}
+  {{ $employer := .employer }}
+  {{ $dates := .dates | default "2023 &mdash; Present" }}
+  {{ $roles := .roles }}
+  {{ $total := len $roles }}
+  <div class="career-tree">
+    <div class="tree-root">
+      <span class="tree-root-name">{{ $employer }}</span>
+      <span class="sep">&middot;</span>
+      <span class="tree-root-dates">{{ $dates | safeHTML }}</span>
+    </div>
+    <div class="tree-trunk">&vert;</div>
+    <ul class="tree-items">
+      {{ range $i, $role := $roles }}
+        {{ $isLast := eq (add $i 1) $total }}
+        {{ $branch := "├──" }}
+        {{ if $isLast }}{{ $branch = "└──" }}{{ end }}
+        {{ $id := .id | default (.title | urlize) }}
+
+        {{ $dateDisplay := "" }}
+        {{ with .date_display }}
+          {{ $dateDisplay = . }}
+        {{ else }}
+          {{ $startYear := "" }}
+          {{ with .start_date }}
+            {{ $years := findRE "[0-9]{4}" . }}
+            {{ with $years }}{{ $startYear = index . 0 }}{{ end }}
+          {{ end }}
+          {{ $endYear := "" }}
+          {{ with .end_date }}
+            {{ $years := findRE "[0-9]{4}" . }}
+            {{ with $years }}{{ $endYear = index . 0 }}{{ end }}
+          {{ else }}
+            {{ $endYear = "Present" }}
+          {{ end }}
+          {{ if eq $endYear "Present" }}
+            {{ $dateDisplay = printf "%s &mdash; Present" $startYear }}
+          {{ else if eq $startYear $endYear }}
+            {{ $dateDisplay = $startYear }}
+          {{ else }}
+            {{ $dateDisplay = printf "%s &mdash; %s" $startYear $endYear }}
+          {{ end }}
+        {{ end }}
+
+        <li class="tree-node">
+          <span class="tree-branch">{{ $branch }}</span>
+          <span class="tree-date">{{ $dateDisplay | safeHTML }}</span>
+          <a href="/resume#{{ $id }}" class="tree-title">{{ .title }}</a>
+          <span class="tree-team">({{ with .department }}{{ . }}{{ else }}{{ .team }}{{ end }})</span>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}

@@ -1,0 +1,30 @@
+{{ define "main" }}
+{{ $resume := or hugo.Data.resume .Site.Data.resume }}
+<article class="resume-page">
+  {{ partial "resume/header.html" $resume }}
+
+  <div class="content prose simple-tables larger-headings {{ with .Params.font }}{{ . }}{{ end }}">
+    <section id="skills" class="resume-section">
+      {{ partial "resume/skills.html" $resume }}
+    </section>
+
+    <section id="employment" class="resume-section">
+      {{ partial "resume/employment.html" $resume }}
+    </section>
+
+    <section id="projects" class="resume-section">
+      {{ partial "resume/projects.html" $resume }}
+    </section>
+
+    <section id="education" class="resume-section">
+      {{ partial "resume/education.html" $resume }}
+    </section>
+
+    {{ with or $resume.professional_service $resume.professional_services }}
+    <section id="service" class="resume-section">
+      {{ partial "resume/service.html" $resume }}
+    </section>
+    {{ end }}
+  </div>
+</article>
+{{ end }}

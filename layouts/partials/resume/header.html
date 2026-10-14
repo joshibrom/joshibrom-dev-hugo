@@ -1,0 +1,19 @@
+<header class="resume-header">
+  <div class="resume-title-row">
+    <h1>{{ .name }}</h1>
+    <a href="/joshua-ibrom-resume.pdf" class="resume-pdf-btn" download>PDF Version &darr;</a>
+  </div>
+  <div class="resume-contact-bar">
+    <span>{{ .location }}</span>
+    <span class="sep">&middot;</span>
+    <a href="mailto:{{ .email }}">{{ .email }}</a>
+    <span class="sep">&middot;</span>
+    <a href="tel:{{ .phone }}">{{ .phone }}</a>
+    <span class="sep">&middot;</span>
+    <a href="{{ .website.href }}" target="_blank" rel="noopener">{{ .website.title }}</a>
+    <span class="sep">&middot;</span>
+    <a href="{{ .github.href }}" target="_blank" rel="noopener">GitHub</a>
+    <span class="sep">&middot;</span>
+    <a href="{{ .linkedin.href }}" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</header>
